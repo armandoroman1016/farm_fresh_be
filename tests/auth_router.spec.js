@@ -12,8 +12,7 @@ const consumerRegister = {
     username: 'local_consumer3',
     email: 'local_consumer3@gmail.com',
     password: 'password',
-    city_id: 1,
-    state_id: 1
+    city_id: 1
 }
 
 describe('auth_router.js', () => {

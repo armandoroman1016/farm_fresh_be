@@ -28,8 +28,7 @@ router.get('/', (req, res) => {
  *  "year_founded": 1955,
  *  "bio": "We sell only the best.",
  *  "farmer_id": 1,
- *  "city_id": 1,
- *  "state_id": 1
+ *  "city_id": 1
  * }
  */
 
@@ -56,8 +55,7 @@ router.get('/:farmId', (req, res) => {
  *  "address": "23528 Example Rd.",
  *  "year_founded": "1894",
  *  "bio": "Locally Grown Produce.",
- *  "city_id": 2,
- *	"state_id": 2
+ *  "city_id": 2
  * }
  * 
  * @apiSuccessExample Successful Response:
@@ -69,8 +67,7 @@ router.get('/:farmId', (req, res) => {
  *   "year_founded": 1894,
  *   "bio": "Locally Grown Produce.",
  *   "farmer_id": 3,
- *   "city_id": 2,
- *   "state_id": 2
+ *   "city_id": 2
  * }
  */
 
@@ -78,7 +75,7 @@ router.post('/:farmerId', (req, res) => {
     const { farmerId } = req.params
     let farmData = req.body
     farmData.farmer_id = Number(farmerId)
-    if(farmData.name && farmData.year_founded && farmData.city_id && farmData.state_id){
+    if(farmData.name && farmData.year_founded && farmData.city_id ){
         Farms.add(farmData)
             .then( farm => {
                 res.status(201).json(farm)
@@ -104,8 +101,7 @@ router.post('/:farmerId', (req, res) => {
  *  "year_founded": "1894",
  *  "bio": "Locally Grown Produce.",
  *	"farmer_id": 3,
- *  "city_id": 2,
- *	"state_id": 2
+ *  "city_id": 2
  * }
  * 
  * @apiSuccessExample Successful Response:
@@ -117,8 +113,7 @@ router.post('/:farmerId', (req, res) => {
  *  "year_founded": 1894,
  *  "bio": "Locally Grown Produce.",
  *  "farmer_id": 3,
- *  "city_id": 2,
- *  "state_id": 2
+ *  "city_id": 2
  * }
  */
 
@@ -128,7 +123,7 @@ router.put('/:farmId', (req, res) => {
     let updatedFarm = req.body
     updatedFarm.id = Number(farmId)
 
-    if(updatedFarm.name && updatedFarm.year_founded && updatedFarm.city_id && updatedFarm.state_id && updatedFarm.farmer_id){
+    if(updatedFarm.name && updatedFarm.year_founded && updatedFarm.city_id && updatedFarm.farmer_id){
         Farms.update(updatedFarm, farmId)
         .then( updated => res.status(200).json(updated))
         .catch( err => res.status(500).json(err))

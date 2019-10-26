@@ -19,7 +19,6 @@ const uuidv1 = require('uuid/v1');
  * @apiSuccess {String} email User Email
  * @apiSuccess {String} password User Password
  * @apiSuccess {Number} city_id User City_Id
- * @apiSuccess {Number} state_id User State_Id
  * 
  * @apiSuccessExample Successful Response:
  * HTTP/1.1 200 OK
@@ -28,8 +27,7 @@ const uuidv1 = require('uuid/v1');
  *  "username": "consumer_1",
  *  "email": "consumer_1@gmail.com",
  *  "password": "password",
- *  "city_id": 1,
- *  "state_id": 1
+ *  "city_id": 1
  * }
  */
 
@@ -106,12 +104,11 @@ router.get('/:id/orders', (req, res) => {
 })
 
 /**
- * @api {get} /api/consumers/farms/:cityId/:stateId Get Local Farms -C
+ * @api {get} /api/consumers/farms/:cityId Get Local Farms -C
  * @apiName GetLocalFarms
  * @apiGroup Consumers
  * 
  * @apiParam {Number} cityId City_Id
- * @apiParam {Number} stateId State_Id 
  * 
  * @apiSuccess {Objects[]} farms array of farm objects near consumer location
  * 
@@ -135,13 +132,12 @@ router.get('/:id/orders', (req, res) => {
  * ]
  */
 
-router.get('/farms/:cityId/:stateId', (req, res) => {
+router.get('/farms/:cityId', (req, res) => {
     const {
-        cityId,
-        stateId
+        cityId
     } = req.params
 
-    Farms.findLocal(cityId, stateId)
+    Farms.findLocal(cityId)
         .then(orders => res.status(200).json(orders))
         .catch(err => res.status(500).json({
             message: "We couldn't get the users at this time."

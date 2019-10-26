@@ -4,10 +4,6 @@ exports.up = function (knex) {
             city.increments();
             city.string('name').unique().notNullable();
         })
-        .createTable('state', state => {
-            state.increments();
-            state.string('name').unique().notNullable();
-        })
         .createTable('user_farmer', user => {
             user.increments();
             user.string('username', 128).notNullable().unique();
@@ -34,13 +30,6 @@ exports.up = function (knex) {
                 .inTable('city')
                 .onUpdate('CASCADE')
                 .onDelete('CASCADE');
-            farm.integer('state_id')
-                .unsigned()
-                .notNullable()
-                .references('id')
-                .inTable('state')
-                .onUpdate('CASCADE')
-                .onDelete('CASCADE');
         })
         .createTable('consumer_user', consumer => {
             consumer.increments();
@@ -52,13 +41,6 @@ exports.up = function (knex) {
                 .notNullable()
                 .references('id')
                 .inTable('city')
-                .onUpdate('CASCADE')
-                .onDelete('CASCADE');
-            consumer.integer('state_id')
-                .unsigned()
-                .notNullable()
-                .references('id')
-                .inTable('state')
                 .onUpdate('CASCADE')
                 .onDelete('CASCADE');
         })
@@ -90,7 +72,6 @@ exports.up = function (knex) {
             order.string('id').notNullable().unique().primary();
             order.string('shipping_address', 256).notNullable();
             order.date('purchase_date').notNullable();
-            order.boolean('delivered').notNullable();
             order.integer('consumer_id')
                 .unsigned()
                 .notNullable()
@@ -102,6 +83,7 @@ exports.up = function (knex) {
         .createTable('order_item', item => {
             item.increments();
             item.integer('quantity').notNullable();
+            item.boolean('delivered').notNullable();
             item.integer('produce_item_id')
                 .unsigned()
                 .notNullable()
@@ -193,6 +175,5 @@ exports.down = function (knex) {
         .dropTableIfExists('consumer_user')
         .dropTableIfExists('farm')
         .dropTableIfExists('user_farmer')
-        .dropTableIfExists('state')
         .dropTableIfExists('city');
 };

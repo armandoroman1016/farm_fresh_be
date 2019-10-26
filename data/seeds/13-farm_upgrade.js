@@ -21,19 +21,19 @@ exports.seed = function (knex) {
       name: '2018 John Deere',
       price: 2000,
       purchased: 0,
-      farm_id: 3
+      farm_id: 1
     },
     {
       name: 'Latest Drip Irrigation',
       price: 3000,
       purchased: 0,
-      farm_id: 3
+      farm_id: 2
     },
     {
       name: '2021 John Deere',
       price: 9000,
       purchased: 0,
-      farm_id: 4
+      farm_id: 2
     },
   ]);
 };

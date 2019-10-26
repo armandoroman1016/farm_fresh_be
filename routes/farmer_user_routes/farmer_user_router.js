@@ -15,7 +15,6 @@ const router = express.Router();
  * @apiSuccess {String} email User Email
  * @apiSuccess {String} password User Password
  * @apiSuccess {Number} city_id User City_Id
- * @apiSuccess {Number} state_id User State_Id
  * 
  * @apiSuccessExample Successful Response:
  * HTTP/1.1 200 OK

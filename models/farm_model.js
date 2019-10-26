@@ -9,11 +9,10 @@ module.exports = {
     findById,
 }
 
-function findLocal(cityId, stateId) {
+function findLocal(cityId) {
     return db('farm')
         .where({
-            city_id: cityId,
-            state_id: stateId
+            city_id: cityId
         })
         .select('farm.name', 'farm.address', 'farm.year_founded', 'farm.bio', 'farm.id')
 }

@@ -34,7 +34,7 @@
       "examples": [
         {
           "title": "Successful Response:",
-          "content": "HTTP/1.1 200 OK\n{\n \"message\": \"Welcome\",\n \"user\": {\n   \"id\": 5,\n   \"username\": \"example\",\n   \"email\": \"example@gmonk.com\",\n   \"password\": \"$2a$14$IF9EQY7mpuNU2a5TVAAE8O7GLmcHBFRvEiv5jCl5RT1uJa1mojudS\",\n   \"city_id\": 1,\n   \"state_id\": 1\n },\n \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicGd1c2VyMTAwIiwidXNlclR5cGUiOiJjb25zdW1lciIsImlhdCI6MTU2OTM0NzE3NiwiZXhwIjoxNTY5NDMzNTc2fQ.EfLfuc_DcYZ5TtjM-Zpd7mwkUPozNhYh-i5jg3YQ-us\"\n}",
+          "content": "HTTP/1.1 200 OK\n{\n \"message\": \"Welcome\",\n \"user\": {\n   \"id\": 5,\n   \"username\": \"example\",\n   \"email\": \"example@gmonk.com\",\n   \"password\": \"$2a$14$IF9EQY7mpuNU2a5TVAAE8O7GLmcHBFRvEiv5jCl5RT1uJa1mojudS\",\n   \"city_id\": 1\n },\n \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicGd1c2VyMTAwIiwidXNlclR5cGUiOiJjb25zdW1lciIsImlhdCI6MTU2OTM0NzE3NiwiZXhwIjoxNTY5NDMzNTc2fQ.EfLfuc_DcYZ5TtjM-Zpd7mwkUPozNhYh-i5jg3YQ-us\"\n}",
           "type": "json"
         }
       ]
@@ -87,7 +87,7 @@
       "examples": [
         {
           "title": "Successful Response:",
-          "content": "HTTP/1.1 201 CREATED\n{\n \"message\": \"Welcome\",\n \"user\": {\n   \"id\": 5,\n   \"username\": \"example\",\n   \"email\": \"example@gmail.com\",\n   \"password\": \"$2a$14$IF9EQY7mpuNU2a5TVAAE8O7GLmcHBFRvEiv5jCl5RT1uJa1mojudS\",\n   \"city_id\": 1,\n   \"state_id\": 1\n },\n \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicGd1c2VyMTAwIiwidXNlclR5cGUiOiJjb25zdW1lciIsImlhdCI6MTU2OTM0NzE3NiwiZXhwIjoxNTY5NDMzNTc2fQ.EfLfuc_DcYZ5TtjM-Zpd7mwkUPozNhYh-i5jg3YQ-us\"\n}",
+          "content": "HTTP/1.1 201 CREATED\n{\n \"message\": \"Welcome\",\n \"user\": {\n   \"id\": 5,\n   \"username\": \"example\",\n   \"email\": \"example@gmail.com\",\n   \"password\": \"$2a$14$IF9EQY7mpuNU2a5TVAAE8O7GLmcHBFRvEiv5jCl5RT1uJa1mojudS\",\n   \"city_id\": 1\n },\n \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicGd1c2VyMTAwIiwidXNlclR5cGUiOiJjb25zdW1lciIsImlhdCI6MTU2OTM0NzE3NiwiZXhwIjoxNTY5NDMzNTc2fQ.EfLfuc_DcYZ5TtjM-Zpd7mwkUPozNhYh-i5jg3YQ-us\"\n}",
           "type": "json"
         }
       ]
@@ -96,7 +96,7 @@
       "examples": [
         {
           "title": "Example Body:",
-          "content": "{\n\t\"username\": \"example\",\n\t\"email\": \"example@gmonk.com\",\n\t\"password\": \"password\",\n\t\"city_id\": \"1\",\n\t\"state_id\": \"1\"\n}",
+          "content": "{\n\t\"username\": \"example\",\n\t\"email\": \"example@gmonk.com\",\n\t\"password\": \"password\",\n\t\"city_id\": \"1\"\n}",
           "type": "json"
         }
       ]
@@ -228,8 +228,8 @@
     "url": "",
     "version": "0.0.0",
     "filename": "./docs/docs/main.js",
-    "group": "C__Users_arman_Documents_Back_End_docs_docs_main_js",
-    "groupTitle": "C__Users_arman_Documents_Back_End_docs_docs_main_js",
+    "group": "C__Users_arman_Documents_farm_farm_fresh_be_docs_docs_main_js",
+    "groupTitle": "C__Users_arman_Documents_farm_farm_fresh_be_docs_docs_main_js",
     "name": ""
   },
   {
@@ -256,8 +256,8 @@
     "url": "",
     "version": "0.0.0",
     "filename": "./docs/main.js",
-    "group": "C__Users_arman_Documents_Back_End_docs_main_js",
-    "groupTitle": "C__Users_arman_Documents_Back_End_docs_main_js",
+    "group": "C__Users_arman_Documents_farm_farm_fresh_be_docs_main_js",
+    "groupTitle": "C__Users_arman_Documents_farm_farm_fresh_be_docs_main_js",
     "name": ""
   },
   {
@@ -316,20 +316,13 @@
             "optional": false,
             "field": "city_id",
             "description": "<p>User City_Id</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "state_id",
-            "description": "<p>User State_Id</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Successful Response:",
-          "content": "HTTP/1.1 200 OK\n{\n \"id\": 1,\n \"username\": \"consumer_1\",\n \"email\": \"consumer_1@gmail.com\",\n \"password\": \"password\",\n \"city_id\": 1,\n \"state_id\": 1\n}",
+          "content": "HTTP/1.1 200 OK\n{\n \"id\": 1,\n \"username\": \"consumer_1\",\n \"email\": \"consumer_1@gmail.com\",\n \"password\": \"password\",\n \"city_id\": 1\n}",
           "type": "json"
         }
       ]
@@ -383,7 +376,7 @@
   },
   {
     "type": "get",
-    "url": "/api/consumers/farms/:cityId/:stateId",
+    "url": "/api/consumers/farms/:cityId",
     "title": "Get Local Farms -C",
     "name": "GetLocalFarms",
     "group": "Consumers",
@@ -396,13 +389,6 @@
             "optional": false,
             "field": "cityId",
             "description": "<p>City_Id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "stateId",
-            "description": "<p>State_Id</p>"
           }
         ]
       }
@@ -452,7 +438,7 @@
       "examples": [
         {
           "title": "Successful Response:",
-          "content": "HTTP/1.1 201 CREATED\n{\n  \"id\": 5,\n  \"name\": \"J.W. Farms\",\n  \"address\": \"23528 Milnes Rd.\",\n  \"year_founded\": 1894,\n  \"bio\": \"Locally Grown Produce.\",\n  \"farmer_id\": 3,\n  \"city_id\": 2,\n  \"state_id\": 2\n}",
+          "content": "HTTP/1.1 201 CREATED\n{\n  \"id\": 5,\n  \"name\": \"J.W. Farms\",\n  \"address\": \"23528 Milnes Rd.\",\n  \"year_founded\": 1894,\n  \"bio\": \"Locally Grown Produce.\",\n  \"farmer_id\": 3,\n  \"city_id\": 2\n}",
           "type": "json"
         }
       ]
@@ -461,7 +447,7 @@
       "examples": [
         {
           "title": "Example Body:",
-          "content": "{\n \"name\": \"Example Farm\",\n \"address\": \"23528 Example Rd.\",\n \"year_founded\": \"1894\",\n \"bio\": \"Locally Grown Produce.\",\n \"city_id\": 2,\n\t\"state_id\": 2\n}",
+          "content": "{\n \"name\": \"Example Farm\",\n \"address\": \"23528 Example Rd.\",\n \"year_founded\": \"1894\",\n \"bio\": \"Locally Grown Produce.\",\n \"city_id\": 2\n}",
           "type": "json"
         }
       ]
@@ -521,7 +507,7 @@
       "examples": [
         {
           "title": "Successful Response:",
-          "content": "HTTP/1.1 200 OK\n{\n \"id\": 1,\n \"name\": \"Organic Farms\",\n \"address\": \"1213 Dairy Rd.\",\n \"year_founded\": 1955,\n \"bio\": \"We sell only the best.\",\n \"farmer_id\": 1,\n \"city_id\": 1,\n \"state_id\": 1\n}",
+          "content": "HTTP/1.1 200 OK\n{\n \"id\": 1,\n \"name\": \"Organic Farms\",\n \"address\": \"1213 Dairy Rd.\",\n \"year_founded\": 1955,\n \"bio\": \"We sell only the best.\",\n \"farmer_id\": 1,\n \"city_id\": 1\n}",
           "type": "json"
         }
       ]
@@ -581,7 +567,7 @@
       "examples": [
         {
           "title": "Successful Response:",
-          "content": "HTTP/1.1 200 OK\n{\n \"id\": 5,\n \"name\": \"Example Farms\",\n \"address\": \"23528 Example Rd.\",\n \"year_founded\": 1894,\n \"bio\": \"Locally Grown Produce.\",\n \"farmer_id\": 3,\n \"city_id\": 2,\n \"state_id\": 2\n}",
+          "content": "HTTP/1.1 200 OK\n{\n \"id\": 5,\n \"name\": \"Example Farms\",\n \"address\": \"23528 Example Rd.\",\n \"year_founded\": 1894,\n \"bio\": \"Locally Grown Produce.\",\n \"farmer_id\": 3,\n \"city_id\": 2\n}",
           "type": "json"
         }
       ]
@@ -590,7 +576,7 @@
       "examples": [
         {
           "title": "Example Body:",
-          "content": "{\n \"name\": \"Example Farms\",\n \"address\": \"23528 Example Rd.\",\n \"year_founded\": \"1894\",\n \"bio\": \"Locally Grown Produce.\",\n\t\"farmer_id\": 3,\n \"city_id\": 2,\n\t\"state_id\": 2\n}",
+          "content": "{\n \"name\": \"Example Farms\",\n \"address\": \"23528 Example Rd.\",\n \"year_founded\": \"1894\",\n \"bio\": \"Locally Grown Produce.\",\n\t\"farmer_id\": 3,\n \"city_id\": 2\n}",
           "type": "json"
         }
       ]
@@ -655,13 +641,6 @@
             "optional": false,
             "field": "city_id",
             "description": "<p>User City_Id</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "state_id",
-            "description": "<p>User State_Id</p>"
           }
         ]
       },

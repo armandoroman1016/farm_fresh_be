@@ -62,33 +62,33 @@ exports.seed = function (knex) {
     {
       quantity: 10,
       tool_id: 1,
-      farm_id: 3
+      farm_id: 1
     },
     {
       quantity: 20,
       tool_id: 2,
-      farm_id: 3
+      farm_id: 2
     },
     {
       quantity: 7,
       tool_id: 3,
-      farm_id: 3
+      farm_id: 2
     },
     {
       quantity: 7,
       tool_id: 4,
-      farm_id: 3
+      farm_id: 1
     },
     {
       quantity: 7,
       tool_id: 5,
-      farm_id: 3
+      farm_id: 2
     },
     {
       quantity: 43,
       tool_id: 6,
-      farm_id: 3
-    },
+      farm_id: 1
+    }
 
   ]);
 };

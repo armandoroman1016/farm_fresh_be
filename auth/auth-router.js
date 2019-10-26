@@ -33,8 +33,7 @@ const checkConsumerUsername = require('../middleware/check_username_consumer')
  *    "username": "example",
  *    "email": "example@gmonk.com",
  *    "password": "$2a$14$IF9EQY7mpuNU2a5TVAAE8O7GLmcHBFRvEiv5jCl5RT1uJa1mojudS",
- *    "city_id": 1,
- *    "state_id": 1
+ *    "city_id": 1
  *  },
  *  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicGd1c2VyMTAwIiwidXNlclR5cGUiOiJjb25zdW1lciIsImlhdCI6MTU2OTM0NzE3NiwiZXhwIjoxNTY5NDMzNTc2fQ.EfLfuc_DcYZ5TtjM-Zpd7mwkUPozNhYh-i5jg3YQ-us"
  * }
@@ -83,8 +82,7 @@ router.post('/shop/login', (req, res) => {
  *	"username": "example",
  *	"email": "example@gmonk.com",
  *	"password": "password",
- *	"city_id": "1",
- *	"state_id": "1"
+ *	"city_id": "1"
  * }
  * 
  * @apiSuccessExample Successful Response:
@@ -96,8 +94,7 @@ router.post('/shop/login', (req, res) => {
  *    "username": "example",
  *    "email": "example@gmail.com",
  *    "password": "$2a$14$IF9EQY7mpuNU2a5TVAAE8O7GLmcHBFRvEiv5jCl5RT1uJa1mojudS",
- *    "city_id": 1,
- *    "state_id": 1
+ *    "city_id": 1
  *  },
  *  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicGd1c2VyMTAwIiwidXNlclR5cGUiOiJjb25zdW1lciIsImlhdCI6MTU2OTM0NzE3NiwiZXhwIjoxNTY5NDMzNTc2fQ.EfLfuc_DcYZ5TtjM-Zpd7mwkUPozNhYh-i5jg3YQ-us"
  * }
@@ -106,7 +103,7 @@ router.post('/shop/login', (req, res) => {
 router.post('/shop/register', checkConsumerUsername, (req, res) => {
     let userInfo = req.body
 
-    if (userInfo.username && userInfo.email && userInfo.password && userInfo.city_id && userInfo.state_id) {
+    if (userInfo.username && userInfo.email && userInfo.password && userInfo.city_id ) {
         const hash = bcrypt.hashSync(userInfo.password, 14)
         userInfo.password = hash
         ShopUsers.addUser(userInfo)
